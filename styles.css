@@ -1,13 +1,14 @@
 body {
     background-color: black; /* Background color */
-    color: white; /* Text color */
+    /* color: white; Text color */
 }
+
 .navbar {
-    background-color: black; /* Navbar color */
-}
-.nav-link {
-    color: white; /* Link color */
-}
-.nav-link:hover {
-    color: gray; /* Change link color on hover */
+    border: 2px solid black; /* Border color */
+    border-radius: 15px; /* Border radius */
+    background-color:rgba(192, 192, 192, 0.5)
+    ; /* Change background color if needed */
+    margin: 0 auto;
+    width: 90%;
+
 }

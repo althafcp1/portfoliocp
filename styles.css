@@ -1,21 +1,17 @@
-
+/* Base styles for body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-
-
+/* Navbar styles */
 nav {
-   
-    display: flex; /* Enable flexbox layout */
+    display: flex; /* Flexbox layout */
     justify-content: space-between; /* Space between logo and navbar */
     align-items: center; /* Vertically align items */
-    padding: 10px 20px; /* Add padding for the nav bar */
+    padding: 10px 20px;
 }
-
-
 
 .navbar {
     list-style-type: none;
@@ -25,48 +21,41 @@ nav {
 }
 
 .navbar li {
-    margin: 0 10px; /* Reduced space between the tabs */
+    margin: 0 10px;
 }
 
 .navbar a {
-    color: black; /* Text color */
-    text-decoration: none; /* Remove underline */
-    padding: 5px 10px; /* Adjust padding for better click area */
-    font-family: 'Roboto', sans-serif;
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
     font-size: 18px;
 }
 
-
 .navbar a:hover {
-    background-color: #87CEFA; /* Change background on hover */
-    border-radius: 20px; /* Rounded corners */
+    background-color: #87CEFA;
+    border-radius: 20px;
 }
 
-
+/* Profile image styling */
 .profile-image {
-    width:450px; /* Set the width of the circular container */
-    height: 450px; /* Set the height to the same value for a circle */
-    overflow: hidden; /* Hide the overflow */
-    border-radius: 50%; /* Create the circular shape */
-    margin-top: 70px;
-    margin-left: 975px;
-    position:fixed ;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 70px auto;
+    margin-left: 970px;
+    
 }
 
 .profile-image img {
-    width: 100%; /* Make the image fill the container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image covers the area without stretching */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-
-
-
-
-
-
+/* Media query to hide the navbar on small screens */
 @media screen and (max-width: 600px) {
     .navbar {
-        display: none;
+        display: none !important;
     }
 }

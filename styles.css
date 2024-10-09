@@ -45,17 +45,38 @@ nav {
     margin: 70px auto;
     margin-left: 970px;
     
+    border: 5px solid transparent; /* Default border */
+    transition: transform 0.5s ease, border-color 0.5s ease; /* Smooth transition for zoom and border color */
 }
 
 .profile-image img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    border-color: black;
+    transition: transform 0.5s ease; /* Smooth zoom transition */
 }
+
+/* Zoom-in animation and border color change on hover */
+.profile-image:hover {
+    transform: scale(1.1); /* Slight zoom-in */
+    border-color: #87CEFA; /* Change border color on hover */
+}
+
+.profile-image:hover img {
+    transform: scale(1.2); /* Zoom-in on the image */
+}
+
 
 /* Media query to hide the navbar on small screens */
 @media screen and (max-width: 600px) {
     .navbar {
         display: none !important;
+    }
+
+    .profile-image {
+        width: 250px;  /* Reduce image size */
+        height: 250px; /* Reduce image height */
+        margin: 20px auto; /* Adjust margin to center */
     }
 }

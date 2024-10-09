@@ -1,4 +1,46 @@
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+nav {
+   
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-between; /* Space between logo and navbar */
+    align-items: center; /* Vertically align items */
+    padding: 10px 20px; /* Add padding for the nav bar */
+}
+
+
+
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.navbar li {
+    margin: 0 10px; /* Reduced space between the tabs */
+}
+
+.navbar a {
+    color: black; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px; /* Adjust padding for better click area */
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+.navbar a:hover {
+    background-color: #87CEFA; /* Change background on hover */
+    border-radius: 20px; /* Rounded corners */
+}
 
 
 

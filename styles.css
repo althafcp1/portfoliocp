@@ -3,9 +3,13 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: black !important;
 }
 
-/* Navbar styles */
+.logo{
+    color: aliceblue;
+}
+
 nav {
     display: flex; /* Flexbox layout */
     justify-content: space-between; /* Space between logo and navbar */
@@ -25,47 +29,78 @@ nav {
 }
 
 .navbar a {
-    color: black;
-    text-decoration: none;
-    padding: 5px 10px;
-    font-size: 18px;
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px; /* Adjust padding for better click area */
+    font-size: 18px; /* Font size */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
 }
 
 .navbar a:hover {
-    background-color: #87CEFA;
-    border-radius: 20px;
+    transform: scale(1.1); /* Scale up the link on hover */
+    background-color: #87CEFA; /* Background color on hover */
+    border-radius: 20px; /* Rounded corners */
 }
 
-/* Profile image styling */
 .profile-image {
-    width: 450px;
-    height: 450px;
-    border-radius: 50%;
-    overflow: hidden;
+    width: 450px; /* Width of the circular container */
+    height: 450px; /* Height to maintain circular shape */
+    border-radius: 50%; /* Create the circular shape */
+    overflow: hidden; /* Hide overflow to keep image within circle */
+    border: 2px solid white; /* Set border width and color to white */
     margin: 70px auto;
     margin-left: 970px;
-    
-    border: 5px solid transparent; /* Default border */
-    transition: transform 0.5s ease, border-color 0.5s ease; /* Smooth transition for zoom and border color */
+    animation: float 5s ease-in-out infinite; /* Animation for fluid movement */
 }
 
 .profile-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-color: black;
-    transition: transform 0.5s ease; /* Smooth zoom transition */
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
 }
 
-/* Zoom-in animation and border color change on hover */
-.profile-image:hover {
-    transform: scale(1.1); /* Slight zoom-in */
-    border-color: #87CEFA; /* Change border color on hover */
+/* Fluid Movement Animation */
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, -10px); /* Move slightly up */
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
-.profile-image:hover img {
-    transform: scale(1.2); /* Zoom-in on the image */
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Media query to hide the navbar on small screens */

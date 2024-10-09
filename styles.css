@@ -1,27 +1,5 @@
-body {
-    background-color: black !important; /* Background color */
-    /* color: white; Text color */
-}
 
 
-.navbar {
-    border: 2px solid black; /* Border color */
-    border-radius: 15px; /* Border radius */
-    background-color:rgba(192, 192, 192, 0.5); 
-    margin: 0 auto;
-    width: 90%;
-    font-family: 'Poppins', sans-serif;;
-
-}
-
-.nav-link {
-    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color and underline */
-}
-
-.nav-link:hover {
-    color: #f0f0f0; /* Change text color on hover */
-    text-decoration: underline; /* Add underline on hover */
-}
 
 
 

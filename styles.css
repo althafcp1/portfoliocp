@@ -63,7 +63,12 @@ nav {
     }
 }
 
-     
+h1.About {
+    position: relative;
+    top: -450px; /* Moves it up */
+    left: 150px; /* Moves it to the right */
+}
+    
 
   h1{
     color: #484848;
@@ -71,10 +76,13 @@ nav {
     font-weight: bold;
     font-family: monospace;
     letter-spacing: 7px;
-    cursor: pointer
+    cursor: default;
   }
   h1 span{
-    transition: .5s linear
+    transition: .5s linear;
+    display: inline-block;
+    cursor: pointer;
+    
   }
   h1:hover span:nth-child(1){
     margin-right: 5px

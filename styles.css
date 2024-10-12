@@ -53,7 +53,6 @@ nav {
     }
 }
 
-
 .name {
     font-family: 'Anonymous Pro', monospace; /* Apply the font */
     position: absolute; /* Use absolute positioning */
@@ -67,26 +66,43 @@ nav {
     color: gray;
 }
 
+.job {
+    font-family: 'Anonymous Pro', monospace; /* Apply the font */
+    position: absolute; /* Use absolute positioning */
+    top: 250px; /* Set initial top position */
+    left: 220px; /* Set initial left position */
+    width: 300px; /* Set a fixed width to stop moving fully to the right */
+    margin: 0; /* Remove margin if needed */
+    font-size: 25px;
+    text-align: left; /* Align text to the left */
+    white-space: nowrap; /* Prevent line breaks */
+    color: whitesmoke;
+}
+
+
+
 /* Media Queries for Small Screens (max-width: 600px) */
 @media screen and (max-width: 600px) {
-    nav {
-        flex-direction: column; /* Stack nav items vertically */
-        align-items: flex-start; /* Align items to the left */
-    }
-
+    /* Profile Image Styles */
     .profile-image {
-        width: 200px;  /* Reduce image size */
-        height: 200px; /* Reduce image height */
-        margin: 20px auto; /* Adjust margin to center */
+      width: 250px; /* Reduce image size */
+      height: 250px;
+      margin: 50px auto 0; /* Center horizontally, add top margin, remove bottom margin */
     }
-
-    .name {
-        top: 50%; /* Use percentage for positioning */
-        left: 50%; /* Center horizontally */
-        transform: translate(-50%, -50%); /* Center the element */
-        font-size: 25px; /* Smaller font size for mobile */
-        text-align: center; /* Center the text */
+  
+    .name, .job {
+      
+      margin-top: 175px; /* Space between image and name/job */
+      left: 20px;
     }
+  
+    .job {
+      margin-bottom: 20px; /* Space between job and content below */
+      margin-top: 190px; /* Increase top margin for job */
+    }
+  }
 
- 
-}
+
+
+
+

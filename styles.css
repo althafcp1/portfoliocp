@@ -6,7 +6,7 @@ body {
     background-color: black !important;
 }
 
-.logo{
+.logo {
     color: aliceblue;
 }
 
@@ -17,32 +17,20 @@ nav {
     padding: 10px 20px;
 }
 
-
-.navbar a {
-    color: white; 
-    text-decoration: none; 
-    font-size: 18px; 
-   
-}
-
-
-
+/* Profile Image Styles */
 .profile-image {
     width: 450px; /* Width of the circular container */
     height: 450px; /* Height to maintain circular shape */
     border-radius: 50%; /* Create the circular shape */
     overflow: hidden; /* Hide overflow to keep image within circle */
     border: 2px solid white; /* Set border width and color to white */
-    margin: 70px auto;
-    margin-left: 970px;
+    margin: 70px auto; /* Center the image */
     animation: float 5s ease-in-out infinite; /* Animation for fluid movement */
-    
-    /* Add glowing effect */
+    margin-left: 970px;    /* Add glowing effect */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
                 0 0 20px rgba(255, 255, 255, 0.6), 
                 0 0 60px rgba(255, 255, 255, 0.4);
 }
-
 
 .profile-image img {
     width: 100%; /* Make the image fill the container */
@@ -63,13 +51,12 @@ nav {
     }
 }
 
-
-
+/* Cursor Styles */
 .cursor {
     font-family: 'Anonymous Pro', monospace; /* Apply the font */
     position: absolute; /* Use absolute positioning */
-    top: 200px; /* Set 350 pixels from the top */
-    left: 200px; /* Set 30 pixels from the left */
+    top: 200px; /* Set initial top position */
+    left: 200px; /* Set initial left position */
     width: 300px; /* Set a fixed width to stop moving fully to the right */
     margin: 0; /* Remove margin if needed */
     font-size: 30px;
@@ -79,12 +66,11 @@ nav {
     color: aliceblue;
 }
 
-
 .cursor::after {
     content: ''; 
 }
 
-
+/* Typewriter Animation */
 .typewriter-animation {
     animation: typewriter 5s steps(50) 1s 1 normal both;
 }
@@ -94,51 +80,11 @@ nav {
     to { width: 100%; }
 }
 
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Media query to hide the navbar on small screens */
+/* Media Queries */
 @media screen and (max-width: 600px) {
-    .navbar {
-        display: none !important;
+    nav {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: flex-start; /* Align items to the left */
     }
 
     .profile-image {
@@ -148,9 +94,11 @@ nav {
     }
 
     .cursor {
-        top: 350px; /* Keep the top position */
-        left: 30px;
-        font-size: 25px;
+        top: 370px; /* Keep the top position for small screens */
+        left: 72px;
+        font-size: 25px; /* Adjust font size */
+        width: auto; /* Allow width to adapt to text */
+        
     }
-
 }
+

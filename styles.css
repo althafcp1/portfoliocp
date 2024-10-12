@@ -11,7 +11,7 @@ body {
 }
 
 nav {
-    display: flex; /* Flexbox layout */
+    display: flex;
     justify-content: space-between; /* Space between logo and navbar */
     align-items: center; /* Vertically align items */
     padding: 10px 20px;
@@ -79,29 +79,15 @@ nav {
     color: whitesmoke;
 }
 
-
-
-/* Media Queries for Small Screens (max-width: 600px) */
-@media screen and (max-width: 600px) {
-    /* Profile Image Styles */
+@media only screen and (max-width: 600px) {
     .profile-image {
-      width: 250px; /* Reduce image size */
-      height: 250px;
-      margin: 50px auto 0; /* Center horizontally, add top margin, remove bottom margin */
+        width: 250px; /* Adjust width for smaller screens */
+        height: 250px; /* Adjust height to maintain the circular shape */
+        margin-left: 0; /* Remove large margin for centering on smaller screens */
+        margin: 50px auto; /* Center the image for phones */
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 
+                    0 0 10px rgba(255, 255, 255, 0.6), 
+                    0 0 30px rgba(255, 255, 255, 0.4); /* Adjust glow for smaller size */
     }
-  
-   .name{
-    top: 375px;
-    font-size: 25px;
-    left: 20px;
-    
-   }
-
-   .job{
-    top: 420px;
-    font-size: 20px;
-    left: 47px;
-    
-   }
-
 }
+

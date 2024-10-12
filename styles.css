@@ -95,7 +95,7 @@ nav {
 
     .cursor {
         top: 370px; /* Keep the top position for small screens */
-        left: 72px;
+        left: 62px;
         font-size: 25px; /* Adjust font size */
         width: auto; /* Allow width to adapt to text */
         

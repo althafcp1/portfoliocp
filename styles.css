@@ -15,6 +15,8 @@ nav {
     justify-content: space-between; /* Space between logo and navbar */
     align-items: center; /* Vertically align items */
     padding: 10px 20px;
+    top: 0;
+    z-index: 1000;
 }
 
 /* Profile Image Styles */
@@ -26,7 +28,7 @@ nav {
     border: 2px solid white; /* Set border width and color to white */
     margin: 70px auto; /* Center the image */
     animation: float 5s ease-in-out infinite; /* Animation for fluid movement */
-    margin-left: 970px;    /* Add glowing effect */
+    margin-left: 970px; /* Add glowing effect */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
                 0 0 20px rgba(255, 255, 255, 0.6), 
                 0 0 60px rgba(255, 255, 255, 0.4);
@@ -55,7 +57,7 @@ nav {
 .cursor {
     font-family: 'Anonymous Pro', monospace; /* Apply the font */
     position: absolute; /* Use absolute positioning */
-    top: 200px; /* Set initial top position */
+    top: 250px; /* Set initial top position */
     left: 200px; /* Set initial left position */
     width: 300px; /* Set a fixed width to stop moving fully to the right */
     margin: 0; /* Remove margin if needed */
@@ -72,7 +74,7 @@ nav {
 
 /* Typewriter Animation */
 .typewriter-animation {
-    animation: typewriter 5s steps(50) 1s 1 normal both;
+    animation: typewriter 8s steps(50) 1s 1 normal both; /* Increase duration from 5s to 8s */
 }
 
 @keyframes typewriter {
@@ -80,7 +82,20 @@ nav {
     to { width: 100%; }
 }
 
-/* Media Queries */
+.name {
+    font-family: 'Anonymous Pro', monospace; /* Apply the font */
+    position: absolute; /* Use absolute positioning */
+    top: 200px; /* Set initial top position */
+    left: 200px; /* Set initial left position */
+    width: 300px; /* Set a fixed width to stop moving fully to the right */
+    margin: 0; /* Remove margin if needed */
+    font-size: 30px;
+    text-align: left; /* Align text to the left */
+    white-space: nowrap; /* Prevent line breaks */
+    color: gray;
+}
+
+/* Media Queries for Small Screens (max-width: 600px) */
 @media screen and (max-width: 600px) {
     nav {
         flex-direction: column; /* Stack nav items vertically */
@@ -88,17 +103,30 @@ nav {
     }
 
     .profile-image {
-        width: 250px;  /* Reduce image size */
-        height: 250px; /* Reduce image height */
+        width: 200px;  /* Reduce image size */
+        height: 200px; /* Reduce image height */
         margin: 20px auto; /* Adjust margin to center */
     }
 
-    .cursor {
-        top: 370px; /* Keep the top position for small screens */
-        left: 55px;
-        font-size: 25px; /* Adjust font size */
-        width: auto; /* Allow width to adapt to text */
-        
+    .name {
+        top: 300px; /* Adjust top position */
+        left: 53px; /* Adjust left position */
+        font-size: 25px; /* Smaller font size for mobile */
+        text-align: center; /* Center the text */
     }
+
+    .cursor {
+       
+        position: absolute; /* Use absolute positioning */
+        top: 340px; /* Adjust top position */
+        left: 52px;
+        width: 300px; /* Set a fixed width to stop moving fully to the right */
+        font-size: 21px; /* Smaller font size for mobile */
+        white-space: nowrap; /* Prevent line breaks */
+        overflow: hidden; /* Hide any overflow content */
+        color: aliceblue; /* Set text color */
+    }
+
+    
 }
 

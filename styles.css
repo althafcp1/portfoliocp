@@ -89,5 +89,13 @@ nav {
                     0 0 10px rgba(255, 255, 255, 0.6), 
                     0 0 30px rgba(255, 255, 255, 0.4); /* Adjust glow for smaller size */
     }
+
+    .name{
+        margin-left: 0;
+        margin: 50px auto;
+        top: 340px;
+        align-items: center;
+        align-content: center;
+    }
 }
 

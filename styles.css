@@ -54,17 +54,18 @@ nav {
 }
 
 .name {
-    font-family: 'Anonymous Pro', monospace; /* Apply the font */
-    position: absolute; /* Use absolute positioning */
-    top: 200px; /* Set initial top position */
-    left: 200px; /* Set initial left position */
-    width: 300px; /* Set a fixed width to stop moving fully to the right */
-    margin: 0; /* Remove margin if needed */
+    font-family: 'Anonymous Pro', monospace; 
+    position: absolute; 
+    top: 200px; 
+    left: 200px; 
+    width: 300px; 
+    margin: 0; 
     font-size: 30px;
-    text-align: left; /* Align text to the left */
-    white-space: nowrap; /* Prevent line breaks */
+    text-align: left;
+    white-space: nowrap; 
     color: gray;
 }
+
 
 .job {
     font-family: 'Anonymous Pro', monospace; /* Apply the font */
@@ -78,6 +79,48 @@ nav {
     white-space: nowrap; /* Prevent line breaks */
     color: whitesmoke;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 600px) {
     .profile-image {
@@ -96,8 +139,8 @@ nav {
         top: 340px;
         align-items: center;
         align-content: center;
-        left: 15%;
-        font-size: 25px;
+        left: 23%;
+        font-size: 20px;
     }
 }
 

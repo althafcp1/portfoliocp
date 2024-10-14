@@ -141,10 +141,14 @@ nav {
     }
 
     .name {
-        margin-bottom: 5px; /* Space between name and typing demo */
+        margin: 0 0 5px 0; /* Remove top margin, keep bottom margin */
         color: aliceblue;
         font-size: 1.5rem; /* Adjust font size for smaller screens */
         text-align: center; /* Center the name */
+    }
+
+    .wrapper {
+        margin-top: -5px; /* Move the wrapper up */
     }
 
     .typing-demo {
@@ -154,8 +158,8 @@ nav {
     }
 
     .profile-image {
-        width: 100px; /* Adjust width for smaller screens */
-        height: 100px; /* Maintain circular shape */
+        width: 130px; /* Adjust width for smaller screens */
+        height: 130px; /* Maintain circular shape */
         border-radius: 50%; /* Ensure it's circular */
     }
 }

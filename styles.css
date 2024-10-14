@@ -160,7 +160,7 @@ nav {
         display: grid;
         place-items: center; /* Ensure centering */
         margin: 20px auto; /* Center the wrapper */
-        margin-top: -188px; /* Move it up by reducing the top margin */
+        margin-top: -180px; /* Move it up by reducing the top margin */
         width: 100%; /* Ensure the wrapper takes full width */
         color: aliceblue;
     }

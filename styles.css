@@ -63,40 +63,34 @@ nav {
     font-size: 30px;
     text-align: left;
     white-space: nowrap; 
-    color: gray;
+    color: whitesmoke;
 }
 
 .wrapper {
     height: 50vh; /* Positive height value */
     display: grid;
     place-items: center;
-    margin-left: -1110px; /* To move the content left */
+    margin-left: -1200px; /* To move the content left */
     margin-top: -610px; /* Adjust this value to move the content up */
 }
 
 
   
-  .typing-demo {
+.typing-demo {
     width: 22ch;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    animation: typing 2s steps(22); /* Removed blink animation */
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid;
     font-family: monospace;
     font-size: 21px;
-  }
-  
-  @keyframes typing {
+    color: aliceblue;
+}
+
+@keyframes typing {
     from {
-      width: 0
+      width: 0;
     }
-  }
-      
-  @keyframes blink {
-    50% {
-      border-color: transparent
-    }
-  }
+}
 
 
 
@@ -151,14 +145,29 @@ nav {
                     0 0 30px rgba(255, 255, 255, 0.4); /* Adjust glow for smaller size */
     }
 
-    .name{
-        margin-left: 0;
+    .name {
         margin: 50px auto;
-        top: 340px;
+        top: 300px; /* Reduced the top value to move it up */
         align-items: center;
-        align-content: center;
-        left: 21%;
+        text-align: center; 
+        left: 0;
         font-size: 20px;
+    }
+    
+
+    .wrapper {
+        display: grid;
+        place-items: center; /* Ensure centering */
+        margin: 20px auto; /* Center the wrapper */
+      
+       
+        width: 100%; /* Ensure the wrapper takes full width */
+        color: aliceblue;
+    }
+
+    .typing-demo {
+        width: 22ch; /* Reduced width */
+        font-size: 18px; /* Reduced font size */
     }
 }
 

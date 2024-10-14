@@ -146,12 +146,13 @@ nav {
     }
 
     .name {
-        margin: 50px auto;
-        top: 300px; /* Reduced the top value to move it up */
-        align-items: center;
-        text-align: center; 
-        left: 0;
-        font-size: 20px;
+       
+        display: grid;
+        place-items: center;
+        top: 375px; /* Reduced the top value to move it up */
+        margin-left: -150px;
+        font-size: 22px;
+       
     }
     
 
@@ -159,15 +160,15 @@ nav {
         display: grid;
         place-items: center; /* Ensure centering */
         margin: 20px auto; /* Center the wrapper */
-      
-       
+        margin-top: -188px; /* Move it up by reducing the top margin */
         width: 100%; /* Ensure the wrapper takes full width */
         color: aliceblue;
     }
+    
 
     .typing-demo {
         width: 22ch; /* Reduced width */
-        font-size: 18px; /* Reduced font size */
+        font-size: 17px; /* Reduced font size */
     }
 }
 

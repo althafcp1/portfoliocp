@@ -6,37 +6,47 @@ body {
     background-color: black !important;
 }
 
-.logo {
-    color: aliceblue;
-}
-
-nav {
+/* Make the container responsive */
+/* Container with reduced size and transparent background */
+.container {
+    border: 2px solid white;
+    border-radius: 10px;
+    
+    padding: 10px; /* Reduced padding */
+    max-width: 80%; /* Reduced max width for a smaller container */
+    height: auto; /* Remove fixed height */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between; /* Space between logo and navbar */
-    align-items: center; /* Vertically align items */
-    padding: 10px 20px;
-    top: 0;
-    z-index: 1000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center the container */
 }
 
-/* Profile Image Styles */
+
 .profile-image {
-    width: 450px; /* Width of the circular container */
-    height: 450px; /* Height to maintain circular shape */
+    width: 200px; /* Set fixed width */
+    height: 200px; /* Set fixed height to match width for a perfect circle */
     border-radius: 50%; /* Create the circular shape */
-    overflow: hidden; /* Hide overflow to keep image within circle */
-    border: 2px solid white; /* Set border width and color to white */
-    margin: 70px auto; /* Center the image */
-    animation: float 5s ease-in-out infinite; /* Animation for fluid movement */
-    margin-left: 970px; /* Add glowing effect */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-                0 0 20px rgba(255, 255, 255, 0.6), 
+    overflow: hidden;
+    border: 2px solid white;
+    margin: 20px auto; /* Center the image */
+    animation: float 5s ease-in-out infinite; /* Animation for floating effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                0 0 20px rgba(255, 255, 255, 0.6),
                 0 0 60px rgba(255, 255, 255, 0.4);
 }
 
 .profile-image img {
-    width: 100%; /* Make the image fill the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Make the image fill the circular container */
+    height: 100%; /* Ensure height fills the container */
+    object-fit: cover; /* Ensure the image covers the entire circle without stretching */
+}
+
+
+.profile-image img {
+    width: 100%; /* Make the image fill the circular container */
+    height: auto;
     object-fit: cover; /* Ensure the image covers the area without stretching */
 }
 
@@ -53,122 +63,75 @@ nav {
     }
 }
 
+nav {
+    width: 100%; /* Make nav take the full width */
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Vertically align items */
+    padding: 10px 20px;
+    position: relative; /* For absolute positioning if needed */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: aliceblue;
+    font-size: 2rem;
+    margin: 0; /* Remove default margin */
+}
+
+
+/* Name styling */
 .name {
-    font-family: 'Anonymous Pro', monospace; 
-    position: absolute; 
-    top: 200px; 
-    left: 200px; 
-    width: 300px; 
-    margin: 0; 
-    font-size: 30px;
-    text-align: left;
-    white-space: nowrap; 
-    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+    color: #B2B2B2;
+    margin-top: 20px;
 }
 
+/* Wrapper for typing demo */
 .wrapper {
-    height: 50vh; /* Positive height value */
-    display: grid;
-    place-items: center;
-    margin-left: -1200px; /* To move the content left */
-    margin-top: -610px; /* Adjust this value to move the content up */
+    display: flex;
+    justify-content: center; /* Center the typing demo */
+    align-items: center;
+    margin-top: 20px;
 }
 
-
-  
+/* Typing demo styling */
 .typing-demo {
     width: 22ch;
-    animation: typing 2s steps(22); /* Removed blink animation */
+    animation: typing 2s steps(22); /* Typing animation */
     white-space: nowrap;
     overflow: hidden;
     font-family: monospace;
     font-size: 21px;
-    color: aliceblue;
+    color: #B2B2B2;
 }
 
 @keyframes typing {
     from {
-      width: 0;
+        width: 0;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Responsive adjustments */
 @media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
     .profile-image {
         width: 250px; /* Adjust width for smaller screens */
-        height: 250px; /* Adjust height to maintain the circular shape */
-        margin-left: 0; /* Remove large margin for centering on smaller screens */
-        margin: 50px auto; /* Center the image for phones */
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 
-                    0 0 10px rgba(255, 255, 255, 0.6), 
-                    0 0 30px rgba(255, 255, 255, 0.4); /* Adjust glow for smaller size */
+        height: 250px; /* Adjust height to maintain circular shape */
     }
 
     .name {
-       
-        display: grid;
-        place-items: center;
-        top: 375px; /* Reduced the top value to move it up */
-        margin-left: -150px;
-        font-size: 22px;
-       
+        font-size: 1.5rem;
     }
-    
-
-    .wrapper {
-        display: grid;
-        place-items: center; /* Ensure centering */
-        margin: 20px auto; /* Center the wrapper */
-        margin-top: -180px; /* Move it up by reducing the top margin */
-        width: 100%; /* Ensure the wrapper takes full width */
-        color: aliceblue;
-    }
-    
 
     .typing-demo {
-        width: 22ch; /* Reduced width */
-        font-size: 17px; /* Reduced font size */
+        font-size: 18px;
     }
 }
-

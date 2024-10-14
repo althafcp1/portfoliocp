@@ -66,19 +66,37 @@ nav {
     color: gray;
 }
 
-
-.job {
-    font-family: 'Anonymous Pro', monospace; /* Apply the font */
-    position: absolute; /* Use absolute positioning */
-    top: 250px; /* Set initial top position */
-    left: 220px; /* Set initial left position */
-    width: 300px; /* Set a fixed width to stop moving fully to the right */
-    margin: 0; /* Remove margin if needed */
-    font-size: 25px;
-    text-align: left; /* Align text to the left */
-    white-space: nowrap; /* Prevent line breaks */
-    color: whitesmoke;
+.wrapper {
+    height: 50vh; /* Positive height value */
+    display: grid;
+    place-items: center;
+    margin-left: -1110px; /* To move the content left */
+    margin-top: -610px; /* Adjust this value to move the content up */
 }
+
+
+  
+  .typing-demo {
+    width: 22ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 21px;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
 
 
 
@@ -139,7 +157,7 @@ nav {
         top: 340px;
         align-items: center;
         align-content: center;
-        left: 23%;
+        left: 21%;
         font-size: 20px;
     }
 }

@@ -3,25 +3,28 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black !important;
+    background-color:  #202124 !important;
 }
 
 /* Make the container responsive */
 /* Container with reduced size and transparent background */
 .container {
-    border: 2px solid white;
+    border: 2px solid ;
     border-radius: 10px;
     
-    padding: 10px; /* Reduced padding */
-    max-width: 80%; /* Reduced max width for a smaller container */
-    height: auto; /* Remove fixed height */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    max-width: 100%; /* Reduce this value to make the container smaller */
+    width: 50% !important; /* Set width to ensure it fills the reduced max-width */
+    height: auto;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto;
 }
+
 
 
 .profile-image {
@@ -122,11 +125,12 @@ nav {
 /* Responsive adjustments */
 @media only screen and (max-width: 600px) {
     .container {
-        border: 2px solid black; /* Keep border for visibility */
+        border: 2px solid white; /* Add color for visibility */
         border-radius: 10px;
-        
-        padding: 10px; /* Adjust padding for smaller screens */
-        max-width: 100%;
+
+        padding: 15px; /* Adjust padding for smaller screens */
+        max-width: 100%; /* Make container take full width */
+        width: 100%; /* Ensure full width usage */
         height: auto;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
         display: flex;

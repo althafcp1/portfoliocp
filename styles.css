@@ -119,14 +119,10 @@ nav {
 
 
 
-
-
-
-
 /* Responsive adjustments */
 @media only screen and (max-width: 600px) {
     .container {
-        border: 2px solid white; /* Keep border for visibility */
+        border: 2px solid black; /* Keep border for visibility */
         border-radius: 10px;
         
         padding: 10px; /* Adjust padding for smaller screens */

@@ -125,19 +125,11 @@ nav {
 /* Responsive adjustments */
 @media only screen and (max-width: 600px) {
     .container {
-        border: 2px solid white; /* Add color for visibility */
-        border-radius: 10px;
-
-        padding: 15px; /* Adjust padding for smaller screens */
-        max-width: 100%; /* Make container take full width */
-        width: 100%; /* Ensure full width usage */
-        height: auto;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column; /* Stack items vertically */
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto; /* Center the container */
+        padding: 10px; 
+        width: 100% !important; /* Ensure it takes full width on small screens */
+        max-width: 100%; /* Ensure max-width is full screen width */
+        box-shadow: none; /* Remove shadows for a cleaner look */
+        margin: 0; /* Remove any margin to ensure full width usage */
     }
 
     .name {

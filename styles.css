@@ -95,7 +95,7 @@ nav {
     font-weight: 600;
     font-size: 2rem;
     text-align: center;
-    color: #FFFDD0;
+    color: white;
     margin-top: 5px;
 }
 
@@ -136,7 +136,9 @@ nav {
         box-shadow: none; /* Remove shadows for a cleaner look */
         margin: 0; /* Remove any margin to ensure full width usage */
     }
-
+    .logo{
+        margin-left: -30px;
+    }
     .name {
         margin: 0 0 5px 0; /* Remove top margin, keep bottom margin */
         color: aliceblue;

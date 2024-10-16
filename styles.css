@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color:  #202124 !important;
+    
 }
 
 /* Make the container responsive */
@@ -11,7 +12,7 @@ body {
 .container {
     border: 2px solid ;
     border-radius: 10px;
-    
+    background-color: #222230;
     padding: 10px;
     max-width: 100%; /* Reduce this value to make the container smaller */
     width: 50% !important; /* Set width to ensure it fills the reduced max-width */
@@ -35,16 +36,20 @@ body {
     border: 2px solid white;
     margin: 20px auto; /* Center the image */
     animation: float 5s ease-in-out infinite; /* Animation for floating effect */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-                0 0 20px rgba(255, 255, 255, 0.6),
-                0 0 60px rgba(255, 255, 255, 0.4);
+    box-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.5),  /* Reduced blur and opacity */
+    0 0 10px rgba(255, 255, 255, 0.4), /* Reduced blur and opacity */
+    0 0 20px rgba(255, 255, 255, 0.3); /* Reduced blur and opacity */
+
 }
 
 .profile-image img {
     width: 100%; /* Make the image fill the circular container */
-    height: 100%; /* Ensure height fills the container */
-    object-fit: cover; /* Ensure the image covers the entire circle without stretching */
+    height: auto;
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+    
 }
+
 
 
 .profile-image img {
@@ -90,8 +95,8 @@ nav {
     font-weight: 600;
     font-size: 2rem;
     text-align: center;
-    color: #B2B2B2;
-    margin-top: 20px;
+    color: #FFFDD0;
+    margin-top: 5px;
 }
 
 /* Wrapper for typing demo */
@@ -99,7 +104,7 @@ nav {
     display: flex;
     justify-content: center; /* Center the typing demo */
     align-items: center;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 /* Typing demo styling */

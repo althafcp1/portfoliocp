@@ -1,4 +1,4 @@
-/* Base styles for body */
+
 body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
@@ -7,24 +7,8 @@ body {
     
 }
 
-/* Make the container responsive */
-/* Container with reduced size and transparent background */
-.container {
-    border: 2px solid ;
-    border-radius: 10px;
-    background-color: #222230;
-    padding: 10px;
-    max-width: 100%; /* Reduce this value to make the container smaller */
-    width: 50% !important; /* Set width to ensure it fills the reduced max-width */
-    height: auto;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
+
 
 
 
@@ -135,6 +119,7 @@ nav {
         max-width: 100%; /* Ensure max-width is full screen width */
         box-shadow: none; /* Remove shadows for a cleaner look */
         margin: 0; /* Remove any margin to ensure full width usage */
+       background-color: #222230;
     }
     .logo{
         margin-left: -30px;

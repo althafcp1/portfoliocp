@@ -468,19 +468,29 @@ footer ul li a{
     }
 
     header{
-        padding: 1rem 3rem;
-        gap: 1rem;
+        padding: 1rem 1rem;
+        gap: 3rem;
     }
 
     header .logo{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .about-container img{
         width: 80vw;
     }
 
+    .text h3 {
+        font-size: 2rem;
+    }
     
+    .text h1 {
+        font-size: 3rem;
+    }
+    
+    .text span {
+        font-size: 1.5rem;
+    }
 
     footer ul{
         gap: 1rem;

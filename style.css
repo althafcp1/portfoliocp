@@ -114,8 +114,7 @@ section{
 
 .about img {
     width: 30vw;      /* Adjust the width to the desired size */
-    height: 30vw;     /* Make the height equal to width for a perfect circle */
-    border-radius: 50%; /* Ensure the image has a circular shape */
+   
 }
 
 

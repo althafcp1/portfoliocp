@@ -25,19 +25,25 @@ header{
     z-index: 1000;
 }
 
-.logo{
-    color: white;
-    font-size: 1.3rem;
+.logo {
+    font-size: 2rem;
     font-weight: 600;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
-
 }
 
+.logo-c {
+    color: rgba(68, 96, 50, 1); 
+}
 
-.logo:hover{
+.logo-p {
+    color: white; 
+}
+
+.logo:hover {
     transform: scale(1.1);
 }
+
 
 .nav-links{
     display: flex;
@@ -47,7 +53,7 @@ header{
 li a{
     position: relative;
     color: white;
-    font-weight: 300;
+    font-weight: 500;
 }
 
 li a::before{
@@ -59,7 +65,7 @@ li a::before{
     top: 25px;
     border-radius: 1rem;
     transition: 0.3s ease-in-out;
-    background: rgba(68, 96, 50, 1); /* Solid green */
+    background: rgba(68, 96, 50, 1); 
 
 
 }
@@ -78,7 +84,7 @@ li a:hover::before{
     cursor: pointer;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
-    background: rgba(68, 96, 50, 1); /* Solid green */
+    background: rgba(68, 96, 50, 1); 
 
 
 }
@@ -143,11 +149,12 @@ section{
 }
 
 .info-box span{
-    background: rgba(68, 96, 50, 1); /* Solid green */
+    background: rgba(68, 96, 50, 1); 
 
     background-clip: text;
     color: transparent;
     font-size: 2rem;
+    font-weight: 450;
 }
 
 .btn-group {
@@ -163,21 +170,21 @@ section{
     font-weight: 500;
     text-wrap: nowrap;
     transition: 0.2s ease-in-out;
-    display: inline-block; /* Ensure the button is block level */
+    display: inline-block; 
 }
 
 .btn a {
-    display: inline-block; /* Make the anchor behave like a button */
-    color: inherit; /* Inherit the color from the parent button */
-    text-decoration: none; /* Remove underline */
-    width: 100%; /* Make the anchor take up full width */
-    height: 100%; /* Make the anchor fill the button area */
+    display: inline-block; 
+    color: inherit; 
+    text-decoration: none; 
+    width: 100%;
+    height: 100%; 
 }
 
 .btn:hover {
-    background: rgba(68, 96, 50, 1); /* Solid green */
+    background: rgba(68, 96, 50, 1); 
     color: white;
-    border: none; /* Remove the border on hover */
+    border: none; 
 }
 
 
@@ -190,7 +197,7 @@ section{
     font-size: 2.5rem;
     cursor: pointer;
     transition: 0.2s ease-in-out;
-    color: black; /* Set color to black */
+    color: black; 
 }
 
 .socials i:hover {
@@ -213,6 +220,9 @@ section{
     
 }
 
+
+
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(4, minmax(120px, 1fr)); 
@@ -224,7 +234,7 @@ section{
     background-color: #fff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
-    padding: 1rem; /* Reduce padding */
+    padding: 1rem; 
     text-align: center;
     transition: transform 0.3s ease-in-out;
     width: 210px;
@@ -246,7 +256,7 @@ section{
 }
 
 .skills-container .skill i {
-    color: rgba(68, 96, 50, 1); /* Replace 'green' with your preferred shade of green, if needed */
+    color: rgba(68, 96, 50, 1);
 }
 
 
@@ -256,7 +266,7 @@ section{
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(68, 96, 50, 1); /* Solid green */
+    background: rgba(68, 96, 50, 1); 
     border-radius: 10px;
 }
 
@@ -266,16 +276,16 @@ section{
 
 
 .projects {
-    padding: 4rem 1rem; /* Add some padding around the section */
-    text-align: center; /* Centers the content within the section */
-    background-color: #f9f9f9; /* Optional: Background color */
+    padding: 4rem 1rem; 
+    text-align: center; 
+    background-color: #f9f9f9;
 }
 
 .projects .section-title {
-    font-size: 3rem; /* Adjust size as needed */
+    font-size: 3rem; 
     font-weight: bold;
     margin-bottom: 2rem;
-    text-align: center; /* Ensures text is centered */
+    text-align: center; 
     color: #333;
 }
 
@@ -368,7 +378,7 @@ footer ul li a{
     }
 
     .skills {
-        padding: 4rem 5rem; /* Reduce padding for smaller screens */
+        padding: 4rem 5rem; 
     }
 
     .skills-container {

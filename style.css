@@ -466,6 +466,15 @@ footer ul li a{
 }
 
 @media(max-width:600px){
+
+    .info-box {
+        position: absolute;
+        top: 10%; /* Moves it 10% from the top of its nearest positioned ancestor */
+        left: 0;
+        right: 0;
+        margin: auto; /* Centers the box horizontally */
+    }
+
     header #menu-icon{
         display: block;
     }

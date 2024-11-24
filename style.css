@@ -318,35 +318,6 @@ section{
     font-weight: 500;
 }
 
-.input-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 2rem;
-    margin-top: 5rem;
-}
-
-.input-box input{
-    
-    border-radius: 3rem;
-    border: 2px solid black;
-    padding: 2rem 8rem;
-    font-size: 3rem;
-}
-
-.input{
-    position: relative;
-}
-
-.input i{
-    position: absolute;
-    font-size: 4rem;
-    top: 50%;
-    left: 10px;
-    transform: translate(50%,-50%);
-}
 
 footer{
     bottom: 0;
@@ -408,19 +379,6 @@ footer ul li a{
         font-size: 0.9rem; 
     }
 
-
-    .input-box input{
-        padding: 2rem 5rem;
-        font-size: 2.5rem;
-    }
-
-    .input input::placeholder{
-        font-size: 2.5rem;
-    }
-
-    .input-box i{
-        font-size: 2.5rem;
-    }
 }
 
 
@@ -443,21 +401,7 @@ footer ul li a{
         flex-direction: column;
     }
 
-    .input-box input{
-        padding: 1rem 2rem;
-        font-size: 1.8rem;
-
-    }
-
-    .input-box input::placeholder{
-        font-size: 1.5rem;
-    }
-
-    .input-box i{
-        display: none;
-    }
-
-
+    
 
     .skills {
         padding: 3rem 2rem; 
@@ -515,8 +459,8 @@ footer ul li a{
     }
 
     header{
-        padding: 1rem 5rem;
-        gap: 2rem;
+        padding: 1rem 4rem;
+        gap: 5rem;
     }
 
     header .logo{
@@ -527,16 +471,7 @@ footer ul li a{
         width: 80vw;
     }
 
-    .input-box input{
-        padding: 0.5rem 3rem;
-        width: 80%;
-        font-size: 1.5rem;
-        margin: 0 auto; /* Centered */
-    }
-
-    .input-box input::placeholder{
-        font-size: 1.5rem;
-    }
+    
 
     footer ul{
         gap: 1rem;

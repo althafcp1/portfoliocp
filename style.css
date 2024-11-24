@@ -150,12 +150,12 @@ section{
     font-size: 2rem;
 }
 
-.btn-group{
+.btn-group {
     display: flex;
     gap: 1rem;
 }
 
-.btn{
+.btn {
     border-radius: 3rem;
     padding: 0.5rem 1.5rem;
     border: 2px solid black;
@@ -163,9 +163,16 @@ section{
     font-weight: 500;
     text-wrap: nowrap;
     transition: 0.2s ease-in-out;
-
+    display: inline-block; /* Ensure the button is block level */
 }
 
+.btn a {
+    display: inline-block; /* Make the anchor behave like a button */
+    color: inherit; /* Inherit the color from the parent button */
+    text-decoration: none; /* Remove underline */
+    width: 100%; /* Make the anchor take up full width */
+    height: 100%; /* Make the anchor fill the button area */
+}
 
 .btn:hover {
     background: rgba(68, 96, 50, 1); /* Solid green */
@@ -173,21 +180,23 @@ section{
     border: none; /* Remove the border on hover */
 }
 
-.socials{
+
+.socials {
     display: flex;
     gap: 2rem;
 }
 
-.socials i{
+.socials i {
     font-size: 2.5rem;
     cursor: pointer;
-    transition: 0,2s ease-in-out;
+    transition: 0.2s ease-in-out;
+    color: black; /* Set color to black */
 }
 
-
-.socials i:hover{
+.socials i:hover {
     transform: scale(1.1);
 }
+
 
     
 .skills {

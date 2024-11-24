@@ -113,7 +113,8 @@ section{
 }
 
 .about img {
-    width: 30vw;      /* Adjust the width to the desired size */
+    width: 30vw;  
+    border-radius: 50%;    
    
 }
 

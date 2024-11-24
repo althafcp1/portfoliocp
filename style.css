@@ -59,7 +59,9 @@ li a::before{
     top: 25px;
     border-radius: 1rem;
     transition: 0.3s ease-in-out;
-    background: linear-gradient(to right,rgba(0,157,255),rgba(255,0,255));
+    background: rgba(68, 96, 50, 1); /* Solid green */
+
+
 }
 
 li a:hover::before{
@@ -76,11 +78,13 @@ li a:hover::before{
     cursor: pointer;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
-    background:linear-gradient(to right,rgba(0,157,255),rgba(255,0,255)) ;
+    background: rgba(68, 96, 50, 1); /* Solid green */
+
+
 }
 
 .visit-btn:hover{
-    background: linear-gradient(to right,rgba(255,0,255),rgba(0,157,255));
+    background: linear-gradient(to right, rgba(255, 253, 208, 1), rgba(68, 96, 50, 1));
 }
 
 #menu-icon{
@@ -108,10 +112,12 @@ section{
     gap: 10rem;
 }
 
-.about img{
-    width: 30vw;
-    border-radius: 50%;
+.about img {
+    width: 30vw;      /* Adjust the width to the desired size */
+    height: 30vw;     /* Make the height equal to width for a perfect circle */
+    border-radius: 50%; /* Ensure the image has a circular shape */
 }
+
 
 .info-box{
     display: flex;
@@ -134,7 +140,8 @@ section{
 }
 
 .info-box span{
-    background:linear-gradient(to right,rgba(0,157,255),rgba(255,0,255)) ;
+    background: rgba(68, 96, 50, 1); /* Solid green */
+
     background-clip: text;
     color: transparent;
     font-size: 2rem;
@@ -157,9 +164,10 @@ section{
 }
 
 
-.btn:hover{
-    background-color: black;
+.btn:hover {
+    background: rgba(68, 96, 50, 1); /* Solid green */
     color: white;
+    border: none; /* Remove the border on hover */
 }
 
 .socials{
@@ -178,6 +186,7 @@ section{
     transform: scale(1.1);
 }
 
+    
 .skills {
     padding: 4rem 20rem;
     text-align: center;
@@ -224,6 +233,10 @@ section{
     font-weight: 500;
 }
 
+.skills-container .skill i {
+    color: rgba(68, 96, 50, 1); /* Replace 'green' with your preferred shade of green, if needed */
+}
+
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -231,7 +244,7 @@ section{
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(0, 157, 255, 0.7);
+    background: rgba(68, 96, 50, 1); /* Solid green */
     border-radius: 10px;
 }
 

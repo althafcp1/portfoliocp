@@ -109,14 +109,14 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10rem;
+    gap: 5rem;
 }
 
 
 
 .about img {
     width: 40vw; 
-    height: 60vw;
+    
     border-radius: 50%;    
    
 }

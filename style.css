@@ -402,19 +402,35 @@ footer ul li a{
 
 
 @media(max-width:768px){
+   
 
-    header{
-        gap: 1rem;
-        padding: 1rem 1rem;
+
+    header {
+        display: flex;
+        justify-content: space-between; /* Aligns the logo and menu icon at opposite ends */
+        align-items: center; /* Aligns items vertically in the center */
+        padding: 1rem; /* Adds padding to the header */
+        position: relative; /* To position the menu icon absolutely */
     }
 
-    header .logo{
+     header .logo{
         font-size: 1rem;
-    }
+        /* display: none; */
+    } 
 
     header .visit-btn{
         display: none;
+    } 
+
+    header .fa-bars {
+        font-size: 2rem; /* Adjust the size of the hamburger icon */
+        cursor: pointer; /* Change cursor on hover */
+        z-index: 10; /* Makes sure the icon stays on top */
+        position: absolute;
+        right: 8px; /* Moves the hamburger icon to the right */
     }
+
+    
 
     .about-container{
         flex-direction: column;

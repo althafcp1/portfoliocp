@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -367,6 +367,7 @@ footer ul li a{
     margin-top: 2rem;
 }
 
+
 @media(max-width:1280px){
     header{
         padding: 1rem 2rem;
@@ -398,10 +399,10 @@ footer ul li a{
         font-size: 0.9rem; 
     }
 
-}
+} */
 
 
-@media(max-width:768px){
+/* @media(max-width:768px){ */
    
     /* header .fa-bars {
         font-size: 2rem; /* Adjust the size of the hamburger icon */
@@ -415,11 +416,11 @@ footer ul li a{
     
     
     
-
+/* 
      header .logo{
         font-size: 1rem;
         margin: 0 5rem 0 0.5rem;
-        /* display: none; */
+        
     } 
 
     header .visit-btn{
@@ -427,14 +428,14 @@ footer ul li a{
     } 
 
     header .fa-bars {
-        font-size: 1.5rem; /* Adjusted to a more suitable size */
-        cursor: pointer; /* Changes cursor on hover */
-        z-index: 10; /* Ensures the icon stays on top */
+        font-size: 1.5rem; 
+        cursor: pointer; 
+        z-index: 10; 
         position: absolute;
-        right: 16px; /* Moves the hamburger icon to the right */
-        top: 50%; /* Vertically centers the icon */
+        right: 16px; 
+        top: 50%; 
         
-        transform: translateY(-50%); /* Fine-tunes vertical alignment */
+        transform: translateY(-50%); 
     }
     
 
@@ -548,4 +549,4 @@ footer ul li a{
     .skill p {
         font-size: 0.7rem; 
     }
-}
+} */

@@ -1,4 +1,4 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -103,6 +103,7 @@ section{
     padding: 8rem 1vh;
     width: 100%;
     position: relative;
+   
 }
 
 .about{
@@ -121,10 +122,15 @@ section{
 
 
 .about img {
-    width: 40vw; 
-    
-    border-radius: 50%;    
-   
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%; /* Makes it a circle */
+    border: 3px solid rgba(68, 96, 50, 1); ; /* Adjust border thickness and color */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.about img:hover {
+    transform: scale(1.2); /* Zoom in by 20% */
 }
 
 
@@ -204,61 +210,58 @@ section{
     transform: scale(1.1);
 }
 
-
-    
-.skills {
-    padding: 4rem 20rem;
-    text-align: center;
-    background-color: #f9f9f9;
-}
-
 .section-title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    text-align: center;
     color: #333;
-    
+    font-family: 'Source Code Pro', monospace;
 }
 
-
-
+.skills {
+    background: #fff;
+    padding: 3rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(4, minmax(120px, 1fr)); 
-    gap: 1.5rem; 
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .skill {
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 1rem;
-    padding: 1rem; 
+    background: #fff;
+    padding: 1rem;
     text-align: center;
-    transition: transform 0.3s ease-in-out;
-    width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 .skill:hover {
-    transform: scale(1.1);
+    transform: translateY(-5px);
+    background-color: #4b6cb7;
+    color: #fff;
 }
 
 .skill i {
-    font-size: 2.5rem; 
-    color: #007bff;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.skill:hover i {
+    color:rgba(68, 96, 50, 1);
 }
 
 .skill p {
-    font-size: 1rem; 
-    font-weight: 500;
+    font-size: 1rem;
+    color: #333;
 }
-
-.skills-container .skill i {
-    color: rgba(68, 96, 50, 1);
-}
-
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -275,6 +278,7 @@ section{
 }
 
 
+
 .projects {
     padding: 4rem 1rem; 
     text-align: center; 
@@ -289,13 +293,13 @@ section{
     color: #333;
 }
 
-.projects-grid{
+.projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.project-card{
+.project-card {
     padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
@@ -309,33 +313,96 @@ section{
     transition: 0.3s ease-in-out;
 }
 
-.project-card:hover{
-    background-color:black;
+.project-card:hover {
+    background-color: black;
     color: white;
-    transform: translateY(-10px)scale(1.02);
+    transform: translateY(-10px) scale(1.02);
 }
 
-
-.project-card img{
+.project-card img {
     width: 20vw;
     border-radius: 1rem;
 }
 
-.project-card:hover .btn{
-    border: 2px soild white;
+.project-card:hover .btn {
+    border: 2px solid white;
     color: white;
 }
 
-.project-card:hover .btn:hover{
+.project-card:hover .btn:hover {
     border: 2px solid white;
     background-color: white;
     color: black;
 }
 
-.project-card h3{
+.project-card h3 {
     font-size: 2rem;
     font-weight: 500;
 }
+
+/* Animation styles */
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+#testimonials {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#testimonials h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.testimonial h3 {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+
+
 
 
 footer{
@@ -367,6 +434,23 @@ footer ul li a{
     margin-top: 2rem;
 }
 
+@media (max-width: 600px) {
+    .project-card:nth-child(odd) {
+        animation: slide-in-left 1s ease-in-out forwards;
+    }
+
+    .project-card:nth-child(even) {
+        animation: slide-in-right 1s ease-in-out forwards;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card img {
+        width: 80vw;
+    }
+}
 
 @media(max-width:1280px){
     header{
@@ -399,24 +483,24 @@ footer ul li a{
         font-size: 0.9rem; 
     }
 
-} */
+}
 
 
-/* @media(max-width:768px){ */
+@media(max-width:768px){
    
-    /* header .fa-bars {
-        font-size: 2rem; /* Adjust the size of the hamburger icon */
-        /* cursor: pointer; /* Change cursor on hover */
-        /* z-index: 10; Makes sure the icon stays on top */ 
-        /* position: absolute; */
-        /* right: 8px; Moves the hamburger icon to the right
-    } */
+    header .fa-bars {
+        font-size: 2rem; 
+         cursor: pointer; 
+        z-index: 10; 
+         position: absolute;
+         right: 8px; 
+    }
      
     
     
     
-    
-/* 
+   
+
      header .logo{
         font-size: 1rem;
         margin: 0 5rem 0 0.5rem;
@@ -549,4 +633,4 @@ footer ul li a{
     .skill p {
         font-size: 0.7rem; 
     }
-} */
+} 

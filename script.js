@@ -19,8 +19,4 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(showNextTestimonial, 5000);
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    const animatedText = document.querySelector(".animated");
-    animatedText.classList.add("slide-in-left");
-});
 

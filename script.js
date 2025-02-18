@@ -20,3 +20,21 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// JavaScript to control the plane animation delay
+const plane = document.querySelector('.plane');
+
+function startPlaneAnimation() {
+  plane.style.animation = 'fly 10s linear 1, float 3s ease-in-out infinite';
+  setTimeout(() => {
+    plane.style.animation = 'none'; // Reset animation
+    setTimeout(() => {
+      plane.style.animation = 'fly 10s linear 1, float 3s ease-in-out infinite';
+    }, 10); // Small delay to restart animation
+  }, 10000); // 10 seconds for the plane to fly across
+}
+
+// Start the animation initially
+startPlaneAnimation();
+
+// Repeat the animation every 60 seconds
+setInterval(startPlaneAnimation, 60000);

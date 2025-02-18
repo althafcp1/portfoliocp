@@ -583,20 +583,7 @@ section{
         right: 8px;
     }
 
-    .interests-section h2 {
-        font-size: 2rem;
-    }
     
-    .interests-section p {
-        font-size: 1rem;
-    }
-    
-    .plane {
-        width: 150px; /* Keeping the size */
-        margin-top: 80px; /* Moves the plane downward */
-        transform: translateY(30px);
-    } /* <-- Closing bracket was missing */
-
     header .logo {
         font-size: 1rem;
         margin: 0 5rem 0 0.5rem;
@@ -618,6 +605,55 @@ section{
 
     .about-container {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-container img {
+        width: 70%; /* Adjust image width for better responsiveness */
+        max-width: 300px; /* Prevent it from getting too big */
+        height: auto;
+        margin-bottom: 20px; /* Adds space between the image and text */
+    }
+
+    .info-box {
+        width: 90%; /* Adjust width to fit smaller screens */
+    }
+
+    .text h3 {
+        font-size: 1.5rem;
+    }
+
+    .text h1 {
+        font-size: 2.5rem;
+    }
+
+    .text span {
+        font-size: 1.2rem;
+    }
+
+    .btn-group {
+        display: flex;
+        flex-direction: column; /* Makes buttons stack vertically */
+        gap: 10px;
+    }
+
+    .btn a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .socials a {
+        font-size: 1.8rem;
     }
 
     .skills {
@@ -677,6 +713,21 @@ section{
         font-size: 1.3rem;
         line-height: 1.5;
     }
+
+    .interests-section h2 {
+        font-size: 2rem;
+    }
+    
+    .interests-section p {
+        font-size: 1rem;
+    }
+    
+    .plane {
+        width: 150px; /* Keeping the size */
+        margin-top: 80px; /* Moves the plane downward */
+        transform: translateY(30px);
+    } /* <-- Closing bracket was missing */
+
 }
 
 @media (max-width: 600px) {

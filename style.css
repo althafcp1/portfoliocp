@@ -576,31 +576,30 @@ section{
 
 @media (max-width: 768px) {
     header .fa-bars {
-        font-size: 2rem; 
-        cursor: pointer; 
-        z-index: 10; 
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 10;
         position: absolute;
         right: 8px;
     }
 
-    
     header .logo {
         font-size: 1rem;
         margin: 0 5rem 0 0.5rem;
-    } 
+    }
 
     header .visit-btn {
         display: none;
-    } 
+    }
 
     header .fa-bars {
-        font-size: 1.5rem; 
-        cursor: pointer; 
-        z-index: 10; 
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 10;
         position: absolute;
-        right: 16px; 
+        right: 16px;
         top: 50%;
-        transform: translateY(-50%); 
+        transform: translateY(-50%);
     }
 
     .about-container {
@@ -610,14 +609,14 @@ section{
     }
 
     .about-container img {
-        width: 70%; /* Adjust image width for better responsiveness */
-        max-width: 300px; /* Prevent it from getting too big */
+        width: 70%;
+        max-width: 300px;
         height: auto;
-        margin-bottom: 20px; /* Adds space between the image and text */
+        margin-bottom: 20px;
     }
 
     .info-box {
-        width: 90%; /* Adjust width to fit smaller screens */
+        width: 90%;
     }
 
     .text h3 {
@@ -626,23 +625,29 @@ section{
 
     .text h1 {
         font-size: 2.5rem;
+        display: inline-block; /* Keeps 'Althaf Cp' in one line */
+        white-space: nowrap;
     }
 
     .text span {
         font-size: 1.2rem;
+        display: inline-block; /* Ensures 'Python Developer' is inline */
+        white-space: nowrap;
+        margin-left: 8px; /* Adds slight space */
     }
 
     .btn-group {
         display: flex;
-        flex-direction: column; /* Makes buttons stack vertically */
-        gap: 10px;
+        flex-direction: row; /* Keeps buttons in one line */
+        gap: 15px;
+        justify-content: center;
     }
 
     .btn a {
-        display: block;
-        width: 100%;
+        display: inline-block;
+        width: auto;
+        padding: 10px 15px;
         text-align: center;
-        padding: 10px;
     }
 
     .socials {
@@ -657,24 +662,24 @@ section{
     }
 
     .skills {
-        padding: 3rem 2rem; 
+        padding: 3rem 2rem;
     }
 
     .skills-container {
-        grid-template-columns: repeat(2, minmax(120px, 1fr)); 
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
         gap: 1rem;
     }
 
     .skill {
-        width: 160px; 
+        width: 160px;
     }
 
     .skill i {
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
     }
 
     .skill p {
-        font-size: 0.8rem; 
+        font-size: 0.8rem;
     }
 
     .about-summary {
@@ -685,7 +690,7 @@ section{
     }
 
     .about-summary h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 500;
         color: #4a4a4a;
         margin-bottom: 1rem;
@@ -693,42 +698,29 @@ section{
     }
 
     .about-summary p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         color: #555;
         font-style: italic;
-        line-height: 1.6;
+        line-height: 1.5;
         font-family: 'Arial', sans-serif;
         opacity: 0.8;
-    }
-
-    .about-summary {
-        padding: 1.5rem;
-    }
-
-    .about-summary h2 {
-        font-size: 2rem;
-    }
-
-    .about-summary p {
-        font-size: 1.3rem;
-        line-height: 1.5;
     }
 
     .interests-section h2 {
         font-size: 2rem;
     }
-    
+
     .interests-section p {
         font-size: 1rem;
     }
-    
-    .plane {
-        width: 150px; /* Keeping the size */
-        margin-top: 80px; /* Moves the plane downward */
-        transform: translateY(30px);
-    } /* <-- Closing bracket was missing */
 
+    .plane {
+        width: 150px;
+        margin-top: 80px;
+        transform: translateY(30px);
+    }
 }
+
 
 @media (max-width: 600px) {
     .about-summary {

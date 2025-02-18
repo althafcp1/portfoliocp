@@ -110,6 +110,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column; 
 }
 
 .about .about-container{
@@ -117,6 +118,8 @@ section{
     align-items: center;
     justify-content: center;
     gap: 5rem;
+   
+
 }
 
 
@@ -213,6 +216,33 @@ section{
     text-align: center;
     color: #333;
     font-family: 'Source Code Pro', monospace;
+}
+
+.about-summary {
+    margin-top: 3rem;  
+    text-align: center;
+    padding: 2rem;
+  
+    width: 100%;  
+}
+
+
+.about-summary h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #4a4a4a;
+    margin-bottom: 1rem;
+    font-family: 'Source Code Pro', monospace;
+}
+
+/* Styling for summary text */
+.about-summary p {
+    font-size: 1.5rem;
+    color: #555;
+    font-style: italic;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    opacity: 0.8;
 }
 
 .skills {
@@ -384,6 +414,9 @@ section{
 
 
 
+
+
+
 footer{
     bottom: 0;
     left: 0;
@@ -514,11 +547,61 @@ footer ul li a{
     .skill p {
         font-size: 0.8rem; 
     }
+
+    /* General styles for the summary section */
+.about-summary {
+    margin-top: 3rem;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+}
+
+.about-summary h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #4a4a4a;
+    margin-bottom: 1rem;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.about-summary p {
+    font-size: 1.5rem;
+    color: #555;
+    font-style: italic;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    opacity: 0.8;
+}
+
+
+    .about-summary {
+        padding: 1.5rem; /* Reduce padding for smaller screens */
+    }
+
+    .about-summary h2 {
+        font-size: 2rem; /* Adjust font size */
+    }
+
+    .about-summary p {
+        font-size: 1.3rem; /* Adjust font size */
+        line-height: 1.5; /* Reduce line height for better readability */
+    }
 }
 
 @media(max-width:600px){
 
-    
+    .about-summary {
+        padding: 1rem; 
+    }
+
+    .about-summary h2 {
+        font-size: 1.8rem; 
+    }
+
+    .about-summary p {
+        font-size: 1.2rem; 
+        line-height: 1.4; 
+    }
 
     header #menu-icon{
         display: block;

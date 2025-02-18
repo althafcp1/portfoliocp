@@ -583,6 +583,14 @@ section{
         height: 0;
     }
 
+    .info-box {
+        margin-top: -50px; /* Adjust the value as needed */
+    }
+
+    .about-summary {
+        margin-top: -10px; /* Adjust for better positioning */
+    }
+
     /* Navbar */
     header .fa-bars {
         font-size: 1.5rem;
@@ -641,29 +649,37 @@ section{
         opacity: 0.8;
     }
 
-    /* Skills */
-    .skills {
-        padding: 3rem 2rem;
-    }
+    
 
     .skills-container {
-        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        display: grid;
+        grid-template-columns: repeat(3, minmax(120px, 1fr)); /* 3 columns */
         gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skills {
+        padding: 2rem 1rem;
+        margin-top: -90px;
     }
 
     .skill {
-        width: 160px;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        
     }
 
     .skill i {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .skill p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        margin-top: 5px;
     }
-
-    /* Projects Section */
+   
     .projects {
         padding: 2rem 1rem;
         text-align: center;
@@ -721,20 +737,47 @@ section{
     }
 
     .btn a {
-        display: block;
-        padding: 10px;
+        display: flex;  /* Use flexbox for perfect alignment */
+        justify-content: center;  /* Center horizontally */
+        align-items: center;  /* Center vertically */
+        padding: 12px;  /* Slightly bigger padding */
         width: 100%;
         text-align: center;
         border-radius: 5px;
-        font-size: 1rem;
+        font-size: 1.1rem;  /* Slightly bigger font */
         font-weight: bold;
-        
         color: black;
         text-decoration: none;
         transition: 0.3s;
     }
+    .interests-section {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
 
-    
+    .plane {
+        width: 120px; /* Adjust image size for smaller screens */
+        margin-top: 150px;
+        transform: translateY(20px);
+    }
+
+    .interests-section h2 {
+        font-size: 1.8rem;
+        margin-top: 10px;
+    }
+
+    .interests-section p {
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 90%;
+        margin: 0 auto; /* Center text properly */
+    }
+
+    .clouds {
+        display: none; /* Hide decorative elements if necessary */
+    }
+
+}
 
 
 @media (max-width: 600px) {

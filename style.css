@@ -574,38 +574,35 @@ section{
 
 }
 
-
-@media(max-width:768px){
-   
+@media (max-width: 768px) {
     header .fa-bars {
         font-size: 2rem; 
-         cursor: pointer; 
+        cursor: pointer; 
         z-index: 10; 
-         position: absolute;
-         right: 8px; 
+        position: absolute;
+        right: 8px;
     }
-     
+
     .interests-section h2 {
         font-size: 2rem;
-      }
-      .interests-section p {
+    }
+    
+    .interests-section p {
         font-size: 1rem;
-      }
-      .plane {
+    }
+    
+    .plane {
         width: 150px; /* Keeping the size */
         margin-top: 80px; /* Moves the plane downward */
-        /* Alternative: transform to move it down */
         transform: translateY(30px);
-    
-   
+    } /* <-- Closing bracket was missing */
 
-     header .logo{
+    header .logo {
         font-size: 1rem;
         margin: 0 5rem 0 0.5rem;
-        
     } 
 
-    header .visit-btn{
+    header .visit-btn {
         display: none;
     } 
 
@@ -615,19 +612,13 @@ section{
         z-index: 10; 
         position: absolute;
         right: 16px; 
-        top: 50%; 
-        
+        top: 50%;
         transform: translateY(-50%); 
     }
-    
 
-    
-
-    .about-container{
+    .about-container {
         flex-direction: column;
     }
-
-    
 
     .skills {
         padding: 3rem 2rem; 
@@ -650,66 +641,63 @@ section{
         font-size: 0.8rem; 
     }
 
-    /* General styles for the summary section */
-.about-summary {
-    margin-top: 3rem;
-    text-align: center;
-    padding: 2rem;
-    width: 100%;
-}
-
-.about-summary h2 {
-    font-size: 2.5rem;
-    font-weight: 500;
-    color: #4a4a4a;
-    margin-bottom: 1rem;
-    font-family: 'Source Code Pro', monospace;
-}
-
-.about-summary p {
-    font-size: 1.5rem;
-    color: #555;
-    font-style: italic;
-    line-height: 1.6;
-    font-family: 'Arial', sans-serif;
-    opacity: 0.8;
-}
-
-
     .about-summary {
-        padding: 1.5rem; /* Reduce padding for smaller screens */
+        margin-top: 3rem;
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
     }
 
     .about-summary h2 {
-        font-size: 2rem; /* Adjust font size */
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: #4a4a4a;
+        margin-bottom: 1rem;
+        font-family: 'Source Code Pro', monospace;
     }
 
     .about-summary p {
-        font-size: 1.3rem; /* Adjust font size */
-        line-height: 1.5; /* Reduce line height for better readability */
+        font-size: 1.5rem;
+        color: #555;
+        font-style: italic;
+        line-height: 1.6;
+        font-family: 'Arial', sans-serif;
+        opacity: 0.8;
     }
-}
-
-@media(max-width:600px){
 
     .about-summary {
-        padding: 1rem; 
+        padding: 1.5rem;
     }
 
     .about-summary h2 {
-        font-size: 1.8rem; 
+        font-size: 2rem;
     }
 
     .about-summary p {
-        font-size: 1.2rem; 
-        line-height: 1.4; 
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-summary {
+        padding: 1rem;
     }
 
-    header #menu-icon{
+    .about-summary h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-summary p {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    header #menu-icon {
         display: block;
     }
 
-    .nav-links{
+    .nav-links {
         position: absolute;
         top: 100%;
         margin-top: 1rem;
@@ -719,31 +707,30 @@ section{
         display: flex;
         flex-direction: column;
         text-align: center;
-        background: rgba(0, 0, 0,0.9);
+        background: rgba(0, 0, 0, 0.9);
         border-radius: 3rem;
         display: none;
     }
 
-    .nav-links li{
+    .nav-links li {
         margin-top: 1.5rem;
         padding: 1rem;
-
     }
 
-    .nav-links.active{
+    .nav-links.active {
         display: block;
     }
 
-    header{
+    header {
         padding: 1rem 1rem;
         gap: 3rem;
     }
 
-    header .logo{
+    header .logo {
         font-size: 1.4rem;
     }
 
-    .about-container img{
+    .about-container img {
         width: 60vw;
         height: 60vw;
     }
@@ -751,35 +738,32 @@ section{
     .text h3 {
         font-size: 2rem;
     }
-    
+
     .text h1 {
         font-size: 3rem;
     }
-    
+
     .text span {
         font-size: 1.5rem;
     }
 
-    footer ul{
+    footer ul {
         gap: 1rem;
     }
 
-
-
-
     .skills-container {
-        grid-template-columns: repeat(2, minmax(120px, 1fr)); 
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
     }
 
     .skill {
-        width: 100%; 
+        width: 100%;
     }
 
     .skill i {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
 
     .skill p {
-        font-size: 0.7rem; 
+        font-size: 0.7rem;
     }
-} 
+}

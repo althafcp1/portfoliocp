@@ -129,9 +129,6 @@ section{
     transition: transform 0.3s ease; /* Smooth zoom effect */
 }
 
-.about img:hover {
-    transform: scale(1.2); /* Zoom in by 20% */
-}
 
 
 .info-box{
@@ -244,7 +241,7 @@ section{
 
 .skill:hover {
     transform: translateY(-5px);
-    background-color: #4b6cb7;
+    background-color: black;
     color: #fff;
 }
 
@@ -255,12 +252,16 @@ section{
 }
 
 .skill:hover i {
-    color:rgba(68, 96, 50, 1);
+  color: white;
 }
 
 .skill p {
     font-size: 1rem;
     color: #333;
+}
+
+.skill:hover p {
+    color: #fff;
 }
 
 ::-webkit-scrollbar {
@@ -286,11 +287,11 @@ section{
 }
 
 .projects .section-title {
-    font-size: 3rem; 
-    font-weight: bold;
-    margin-bottom: 2rem;
-    text-align: center; 
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    text-align: center;
     color: #333;
+    font-family: 'Source Code Pro', monospace;
 }
 
 .projects-grid {
@@ -558,7 +559,8 @@ footer ul li a{
     }
 
     .about-container img{
-        width: 80vw;
+        width: 60vw;
+        height: 60vw;
     }
 
     .text h3 {

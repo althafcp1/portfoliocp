@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -291,6 +293,7 @@ section{
 
 .socials i:hover {
     transform: scale(1.1);
+    
 }
 
 .section-title {
@@ -301,15 +304,37 @@ section{
     font-family: 'Source Code Pro', monospace;
 }
 
+/* Animation for the about-summary section */
 .about-summary {
-    margin-top: 3rem;  
+    margin-top: 3rem;
     text-align: center;
     padding: 2rem;
-  
-    width: 100%;  
+    width: 100%;
+    opacity: 0; /* Start with invisible content */
+    transform: translateY(20px); /* Start slightly below */
+    animation: fadeInUp 1s ease-out forwards; /* Apply animation */
+    animation-delay: 0.5s; /* Delay the animation */
 }
 
+.about-summary.animate {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
 
+/* Keyframes for fade-in and slide-up effect */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styling for the heading and paragraph (unchanged) */
 .about-summary h2 {
     font-size: 2.5rem;
     font-weight: 500;
@@ -318,7 +343,6 @@ section{
     font-family: 'Source Code Pro', monospace;
 }
 
-/* Styling for summary text */
 .about-summary p {
     font-size: 1.5rem;
     color: #555;
@@ -328,13 +352,7 @@ section{
     opacity: 0.8;
 }
 
-.skills {
-    background: #F8F9FA;
-    padding: 3rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    min-height: 500px;
-    text-align: center;
-}
+
 
 .section-title {
     font-size: 2rem;
@@ -345,6 +363,19 @@ section{
     letter-spacing: 1px;
 }
 
+/* Skills Section Styling */
+#skills {
+    padding: 4rem 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -352,6 +383,8 @@ section{
     padding: 0 2rem;
     max-width: 1100px;
     margin: auto;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
 }
 
 .skill {
@@ -365,6 +398,8 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
 }
 
 .skill:hover {
@@ -377,7 +412,6 @@ section{
 .skill i {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    
     transition: color 0.3s;
 }
 
@@ -396,6 +430,46 @@ section{
     color: #fff;
 }
 
+/* Animation for skills container */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation when the section is in view */
+.skills.animate .skills-container {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.skills.animate .skill {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+/* Staggered delays for individual skills */
+.skills.animate .skill:nth-child(1) { animation-delay: 0.2s; }
+.skills.animate .skill:nth-child(2) { animation-delay: 0.4s; }
+.skills.animate .skill:nth-child(3) { animation-delay: 0.6s; }
+.skills.animate .skill:nth-child(4) { animation-delay: 0.8s; }
+.skills.animate .skill:nth-child(5) { animation-delay: 1s; }
+.skills.animate .skill:nth-child(6) { animation-delay: 1.2s; }
+.skills.animate .skill:nth-child(7) { animation-delay: 1.4s; }
+.skills.animate .skill:nth-child(8) { animation-delay: 1.6s; }
+.skills.animate .skill:nth-child(9) { animation-delay: 1.8s; }
+.skills.animate .skill:nth-child(10) { animation-delay: 2s; }
+.skills.animate .skill:nth-child(11) { animation-delay: 2.2s; }
+.skills.animate .skill:nth-child(12) { animation-delay: 2.4s; }
+.skills.animate .skill:nth-child(13) { animation-delay: 2.6s; }
+.skills.animate .skill:nth-child(14) { animation-delay: 2.8s; }
 
 
 ::-webkit-scrollbar {

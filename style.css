@@ -617,6 +617,7 @@ section{
         align-items: center;
         text-align: center;
         padding: 2rem 1rem;
+        margin-top: -50px;
     }
 
     .about-container img {
@@ -722,6 +723,10 @@ section{
     }
 
     
+    #cv-contact-buttons {
+        display: none;
+    }
+    
     .btn-group {
         display: flex;
         flex-wrap: wrap;
@@ -737,45 +742,20 @@ section{
     }
 
     .btn a {
-        display: flex;  /* Use flexbox for perfect alignment */
-        justify-content: center;  /* Center horizontally */
-        align-items: center;  /* Center vertically */
-        padding: 12px;  /* Slightly bigger padding */
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+        padding: 12px; 
         width: 100%;
         text-align: center;
         border-radius: 5px;
-        font-size: 1.1rem;  /* Slightly bigger font */
+        font-size: 1.1rem;  
         font-weight: bold;
-        color: black;
+        color: white;
         text-decoration: none;
         transition: 0.3s;
     }
-    .interests-section {
-        text-align: center;
-        padding: 2rem 1rem;
-    }
-
-    .plane {
-        width: 120px; /* Adjust image size for smaller screens */
-        margin-top: 150px;
-        transform: translateY(20px);
-    }
-
-    .interests-section h2 {
-        font-size: 1.8rem;
-        margin-top: 10px;
-    }
-
-    .interests-section p {
-        font-size: 1rem;
-        line-height: 1.5;
-        max-width: 90%;
-        margin: 0 auto; /* Center text properly */
-    }
-
-    .clouds {
-        display: none; /* Hide decorative elements if necessary */
-    }
+   
 
 }
 

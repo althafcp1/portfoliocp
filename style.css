@@ -167,6 +167,41 @@ section{
     font-weight: 450;
 }
 
+.web-developer {
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.web-developer span {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: appear 0.8s forwards ease-in-out; /* Increased duration */
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Adjusted delays for smoother animation */
+.web-developer span:nth-child(1) { animation-delay: 0.2s; }
+.web-developer span:nth-child(2) { animation-delay: 0.4s; }
+.web-developer span:nth-child(3) { animation-delay: 0.6s; }
+.web-developer span:nth-child(4) { animation-delay: 0.8s; }
+.web-developer span:nth-child(5) { animation-delay: 1.0s; }
+.web-developer span:nth-child(6) { animation-delay: 1.2s; }
+.web-developer span:nth-child(7) { animation-delay: 1.4s; }
+.web-developer span:nth-child(8) { animation-delay: 1.6s; }
+.web-developer span:nth-child(9) { animation-delay: 1.8s; }
+.web-developer span:nth-child(10) { animation-delay: 2.0s; }
+.web-developer span:nth-child(11) { animation-delay: 2.2s; }
+.web-developer span:nth-child(12) { animation-delay: 2.4s; }
+.web-developer span:nth-child(13) { animation-delay: 2.6s; }
+
+
 .btn-group {
     display: flex;
     gap: 1rem;
@@ -417,75 +452,6 @@ section{
 
 
 
-.interests-section {
-    padding: 20px 10px; /* Reduced padding (top/bottom) */
-    text-align: center;
-    background: linear-gradient(to bottom, #000428, #004e92);
-    color: white;
-    position: relative;
-    overflow: hidden;
-    min-height: 500px; /* Adjust to a reasonable value */
-    /* max-height: 300px; */
-    
-  }
-  .interests-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    animation: fadeIn 2s ease-in-out;
-  }
-
-  .interests-section p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 40px;
-    animation: fadeIn 3s ease-in-out;
-  }
-
-  /* Plane Animation */
-  .plane {
-    position: absolute;
-    top: 50%;
-    right: -200px; /* Start from the right */
-    width: 200px; /* Adjust size as needed */
-    animation: fly 20s linear infinite, float 3s ease-in-out infinite;
-    animation-delay: 0s, 0s; /* No delay for the first cycle */
-    margin-top: 80px;
-}
-
-@keyframes fly {
-    0% { right: -200px; transform: scale(0.8) rotate(0deg); }
-    50% { transform: scale(1) rotate(-5deg); } /* Slight tilt for realism */
-    100% { right: 100%; transform: scale(0.8) rotate(0deg); }
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-
-  /* Clouds Animation */
-  .clouds {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/clouds.png') repeat;
-    opacity: 0.3;
-    animation: moveClouds 60s linear infinite;
-  }
-
-  @keyframes moveClouds {
-    0% { background-position: 0 0; }
-    100% { background-position: 1000px 0; }
-  }
-
-  /* Fade-In Animation */
-  @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
 
 
 
@@ -650,6 +616,32 @@ section{
         opacity: 0.8;
     }
 
+    @media screen and (max-width: 768px) {
+        .web-developer {
+            font-size: 1.2em; /* Slightly smaller text for mobile */
+        }
+    
+        .web-developer span {
+            transform: translateY(15px);
+            animation: appear 1s forwards ease-in-out; /* Slower animation */
+        }
+    
+        /* Increase delay for a smoother effect on mobile */
+        .web-developer span:nth-child(1) { animation-delay: 0.3s; }
+        .web-developer span:nth-child(2) { animation-delay: 0.5s; }
+        .web-developer span:nth-child(3) { animation-delay: 0.7s; }
+        .web-developer span:nth-child(4) { animation-delay: 0.9s; }
+        .web-developer span:nth-child(5) { animation-delay: 1.1s; }
+        .web-developer span:nth-child(6) { animation-delay: 1.3s; }
+        .web-developer span:nth-child(7) { animation-delay: 1.5s; }
+        .web-developer span:nth-child(8) { animation-delay: 1.7s; }
+        .web-developer span:nth-child(9) { animation-delay: 1.9s; }
+        .web-developer span:nth-child(10) { animation-delay: 2.1s; }
+        .web-developer span:nth-child(11) { animation-delay: 2.3s; }
+        .web-developer span:nth-child(12) { animation-delay: 2.5s; }
+        .web-developer span:nth-child(13) { animation-delay: 2.7s; }
+    }
+
     
 
     .skills-container {
@@ -734,13 +726,13 @@ section{
         justify-content: center;
         align-items: center;
     }
-
+    
     .btn {
         flex: 1;
         min-width: 120px;
         text-align: center;
     }
-
+    
     .btn a {
         display: flex;  
         justify-content: center;  
@@ -751,11 +743,18 @@ section{
         border-radius: 5px;
         font-size: 1.1rem;  
         font-weight: bold;
-        color: white;
+        color: black; /* Default text color */
+        background-color: transparent; /* Ensure background remains transparent */
         text-decoration: none;
-        transition: 0.3s;
+        transition: color 0.3s, background-color 0.3s;
     }
-   
+        
+    .btn:hover a {
+        color: white; /* Change text color on hover */
+        background-color: black; /* Change background to contrast */
+    }
+
+    
 
 }
 

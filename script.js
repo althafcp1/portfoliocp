@@ -38,3 +38,8 @@ startPlaneAnimation();
 
 // Repeat the animation every 60 seconds
 setInterval(startPlaneAnimation, 60000);
+
+document.addEventListener("DOMContentLoaded", function() {
+  const webDeveloperText = document.querySelector(".web-developer");
+  webDeveloperText.classList.add("animate");
+});

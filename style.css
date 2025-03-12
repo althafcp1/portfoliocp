@@ -306,7 +306,7 @@ section{
 
 /* Animation for the about-summary section */
 .about-summary {
-    margin-top: 3rem;
+    margin-top: -1rem;
     text-align: center;
     padding: 2rem;
     width: 100%;
@@ -383,8 +383,9 @@ section{
     padding: 0 2rem;
     max-width: 1100px;
     margin: auto;
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Start slightly below */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .skill {
@@ -393,13 +394,14 @@ section{
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease-out, background-color 0.3s ease-out, box-shadow 0.3s ease-out;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Start slightly below */
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .skill:hover {
@@ -412,7 +414,7 @@ section{
 .skill i {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    transition: color 0.3s;
+    transition: color 0.3s ease-out;
 }
 
 .skill:hover i {
@@ -423,52 +425,39 @@ section{
     font-size: 1rem;
     font-weight: 600;
     color: #333;
-    transition: color 0.3s;
+    transition: color 0.3s ease-out;
 }
 
 .skill:hover span {
     color: #fff;
 }
-/* Animation for skills container */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px); /* Start slightly lower */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-/* Apply animation when the section is in view */
-.skills.animate .skills-container {
+/* Animation when section is in view */
+.skills-container.show {
     opacity: 1;
     transform: translateY(0);
-    animation: fadeInUp 1.5s ease-out forwards; /* Increased duration */
 }
 
-.skills.animate .skill {
+.skill.show {
     opacity: 1;
-    transform: translateY(0);
-    animation: fadeInUp 0.8s ease-out forwards; /* Slightly slower */
+    transform: scale(1);
 }
 
-/* Staggered delays for individual skills */
-.skills.animate .skill:nth-child(1) { animation-delay: 0.3s; }
-.skills.animate .skill:nth-child(2) { animation-delay: 0.6s; }
-.skills.animate .skill:nth-child(3) { animation-delay: 0.9s; }
-.skills.animate .skill:nth-child(4) { animation-delay: 1.2s; }
-.skills.animate .skill:nth-child(5) { animation-delay: 1.5s; }
-.skills.animate .skill:nth-child(6) { animation-delay: 1.8s; }
-.skills.animate .skill:nth-child(7) { animation-delay: 2.1s; }
-.skills.animate .skill:nth-child(8) { animation-delay: 2.4s; }
-.skills.animate .skill:nth-child(9) { animation-delay: 2.7s; }
-.skills.animate .skill:nth-child(10) { animation-delay: 3s; }
-.skills.animate .skill:nth-child(11) { animation-delay: 3.3s; }
-.skills.animate .skill:nth-child(12) { animation-delay: 3.6s; }
-.skills.animate .skill:nth-child(13) { animation-delay: 3.9s; }
-.skills.animate .skill:nth-child(14) { animation-delay: 4.2s; }
+/* Staggered delays for smooth effect */
+.skill:nth-child(1) { transition-delay: 0.2s; }
+.skill:nth-child(2) { transition-delay: 0.4s; }
+.skill:nth-child(3) { transition-delay: 0.6s; }
+.skill:nth-child(4) { transition-delay: 0.8s; }
+.skill:nth-child(5) { transition-delay: 1s; }
+.skill:nth-child(6) { transition-delay: 1.2s; }
+.skill:nth-child(7) { transition-delay: 1.4s; }
+.skill:nth-child(8) { transition-delay: 1.6s; }
+.skill:nth-child(9) { transition-delay: 1.8s; }
+.skill:nth-child(10) { transition-delay: 2s; }
+.skill:nth-child(11) { transition-delay: 2.2s; }
+.skill:nth-child(12) { transition-delay: 2.4s; }
+.skill:nth-child(13) { transition-delay: 2.6s; }
+.skill:nth-child(14) { transition-delay: 2.8s; }
 
 
 ::-webkit-scrollbar {

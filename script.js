@@ -1,15 +1,14 @@
-const menuIcon = document.querySelector("#menu-icon");
-const navLinks = document.querySelector(".nav-links");
-
-// Toggle menu visibility on click
-if (menuIcon && navLinks) {
-    menuIcon.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
-}
-
-// Run when DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
+    // Toggle Menu
+    const menuIcon = document.querySelector("#menu-icon");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (menuIcon && navLinks) {
+        menuIcon.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    }
+
     // Testimonial Slider
     const testimonials = document.querySelectorAll(".testimonial");
     let currentTestimonial = 0;
@@ -20,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
             currentTestimonial = (currentTestimonial + 1) % testimonials.length;
             testimonials[currentTestimonial].classList.add("active");
         }
-
         setInterval(showNextTestimonial, 5000);
     }
 
@@ -30,17 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (plane) {
         function startPlaneAnimation() {
             plane.style.animation = "fly 10s linear 1, float 3s ease-in-out infinite";
-            setTimeout(() => {
-                plane.style.animation = "none"; // Reset animation
-                plane.style.animationPlayState = "paused"; // Pause animation
-                requestAnimationFrame(() => {
-                    plane.style.animation = "fly 10s linear 1, float 3s ease-in-out infinite";
-                    plane.style.animationPlayState = "running"; // Restart animation
-                });
-            }, 10000); // 10s flight time
         }
-
-        // Start and repeat plane animation
         startPlaneAnimation();
         setInterval(startPlaneAnimation, 60000);
     }
@@ -51,27 +39,24 @@ document.addEventListener("DOMContentLoaded", function () {
         webDeveloperText.classList.add("animate");
     }
 
-    // About Section Animation
-    const aboutSummary = document.querySelector(".about-summary");
-    if (aboutSummary) {
+    // Scroll-Based Animations
+    const sections = document.querySelectorAll(".animate-on-scroll");
+    if (sections.length > 0) {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        aboutSummary.classList.add("animate");
-                        observer.unobserve(aboutSummary); // Stop observing after animation
+                        entry.target.classList.add("animate");
+                        observer.unobserve(entry.target);
                     }
                 });
             },
-            { threshold: 0.5 }
+            { threshold: 0.4 }
         );
-        observer.observe(aboutSummary);
+        sections.forEach((section) => observer.observe(section));
     }
-});
 
-
-
-document.addEventListener("DOMContentLoaded", function () {
+    // Skills Section Animation
     const skillsSection = document.querySelector("#skills");
     const skillsContainer = document.querySelector(".skills-container");
     const skills = document.querySelectorAll(".skill");
@@ -83,13 +68,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (entry.isIntersecting) {
                         skillsContainer.classList.add("show");
                         skills.forEach(skill => skill.classList.add("show"));
-                        observer.unobserve(skillsSection); 
+                        observer.unobserve(skillsSection);
                     }
                 });
             },
-            { threshold: 0.3 } 
+            { threshold: 0.3 }
         );
-
         observer.observe(skillsSection);
     }
 });

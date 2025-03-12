@@ -77,3 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(skillsSection);
     }
 });
+
+
+document.getElementById("year").textContent = new Date().getFullYear();

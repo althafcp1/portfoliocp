@@ -429,12 +429,11 @@ section{
 .skill:hover span {
     color: #fff;
 }
-
 /* Animation for skills container */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px); /* Start slightly lower */
     }
     to {
         opacity: 1;
@@ -446,30 +445,30 @@ section{
 .skills.animate .skills-container {
     opacity: 1;
     transform: translateY(0);
-    animation: fadeInUp 1s ease-out forwards;
+    animation: fadeInUp 1.5s ease-out forwards; /* Increased duration */
 }
 
 .skills.animate .skill {
     opacity: 1;
     transform: translateY(0);
-    animation: fadeInUp 0.5s ease-out forwards;
+    animation: fadeInUp 0.8s ease-out forwards; /* Slightly slower */
 }
 
 /* Staggered delays for individual skills */
-.skills.animate .skill:nth-child(1) { animation-delay: 0.2s; }
-.skills.animate .skill:nth-child(2) { animation-delay: 0.4s; }
-.skills.animate .skill:nth-child(3) { animation-delay: 0.6s; }
-.skills.animate .skill:nth-child(4) { animation-delay: 0.8s; }
-.skills.animate .skill:nth-child(5) { animation-delay: 1s; }
-.skills.animate .skill:nth-child(6) { animation-delay: 1.2s; }
-.skills.animate .skill:nth-child(7) { animation-delay: 1.4s; }
-.skills.animate .skill:nth-child(8) { animation-delay: 1.6s; }
-.skills.animate .skill:nth-child(9) { animation-delay: 1.8s; }
-.skills.animate .skill:nth-child(10) { animation-delay: 2s; }
-.skills.animate .skill:nth-child(11) { animation-delay: 2.2s; }
-.skills.animate .skill:nth-child(12) { animation-delay: 2.4s; }
-.skills.animate .skill:nth-child(13) { animation-delay: 2.6s; }
-.skills.animate .skill:nth-child(14) { animation-delay: 2.8s; }
+.skills.animate .skill:nth-child(1) { animation-delay: 0.3s; }
+.skills.animate .skill:nth-child(2) { animation-delay: 0.6s; }
+.skills.animate .skill:nth-child(3) { animation-delay: 0.9s; }
+.skills.animate .skill:nth-child(4) { animation-delay: 1.2s; }
+.skills.animate .skill:nth-child(5) { animation-delay: 1.5s; }
+.skills.animate .skill:nth-child(6) { animation-delay: 1.8s; }
+.skills.animate .skill:nth-child(7) { animation-delay: 2.1s; }
+.skills.animate .skill:nth-child(8) { animation-delay: 2.4s; }
+.skills.animate .skill:nth-child(9) { animation-delay: 2.7s; }
+.skills.animate .skill:nth-child(10) { animation-delay: 3s; }
+.skills.animate .skill:nth-child(11) { animation-delay: 3.3s; }
+.skills.animate .skill:nth-child(12) { animation-delay: 3.6s; }
+.skills.animate .skill:nth-child(13) { animation-delay: 3.9s; }
+.skills.animate .skill:nth-child(14) { animation-delay: 4.2s; }
 
 
 ::-webkit-scrollbar {
@@ -549,7 +548,7 @@ section{
     font-weight: 500;
 }
 
-
+/* 
 #testimonials {
     background-color: #f9f9f9;
     padding: 50px 0;
@@ -588,7 +587,7 @@ section{
     color: #555;
 }
 
-
+ */
 
 
 

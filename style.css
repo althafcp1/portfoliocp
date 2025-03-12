@@ -759,40 +759,37 @@ section{
 
 
 
-
-
-  /* Media Queries */
-
-@media (max-width: 1280px) {
-    header {
+  @media(max-width:1280px){
+    header{
         padding: 1rem 2rem;
         gap: 2rem;
     }
 
-    .about .about-container {
-        gap: 3rem;
+    .about .about-container{
+        gap: 3ram;
     }
 
     .skills {
-        padding: 4rem 5rem;
+        padding: 4rem 5rem; 
     }
 
     .skills-container {
-        grid-template-columns: repeat(3, minmax(120px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(3, minmax(120px, 1fr)); 
+        gap: 1rem; 
     }
 
     .skill {
-        width: 180px;
+        width: 180px; 
     }
 
     .skill i {
-        font-size: 2rem;
+        font-size: 2rem; 
     }
 
     .skill p {
-        font-size: 0.9rem;
+        font-size: 0.9rem; 
     }
+
 }
 
 @media (max-width: 768px) {
@@ -804,11 +801,11 @@ section{
     }
 
     .info-box {
-        margin-top: -50px;
+        margin-top: -50px; /* Adjust the value as needed */
     }
 
     .about-summary {
-        margin-top: -10px;
+        margin-top: -10px; /* Adjust for better positioning */
     }
 
     /* Navbar */
@@ -853,8 +850,54 @@ section{
         width: 100%;
     }
 
+    .about-summary h2 {
+        font-size: 2rem;
+        font-weight: 500;
+        color: #4a4a4a;
+        margin-bottom: 1rem;
+        font-family: 'Source Code Pro', monospace;
+    }
+
+    .about-summary p {
+        font-size: 1.2rem;
+        color: #555;
+        font-style: italic;
+        line-height: 1.5;
+        font-family: 'Arial', sans-serif;
+        opacity: 0.8;
+    }
+
+    @media screen and (max-width: 768px) {
+        .web-developer {
+            font-size: 1.2em; /* Slightly smaller text for mobile */
+        }
+    
+        .web-developer span {
+            transform: translateY(15px);
+            animation: appear 1s forwards ease-in-out; /* Slower animation */
+        }
+    
+        /* Increase delay for a smoother effect on mobile */
+        .web-developer span:nth-child(1) { animation-delay: 0.3s; }
+        .web-developer span:nth-child(2) { animation-delay: 0.5s; }
+        .web-developer span:nth-child(3) { animation-delay: 0.7s; }
+        .web-developer span:nth-child(4) { animation-delay: 0.9s; }
+        .web-developer span:nth-child(5) { animation-delay: 1.1s; }
+        .web-developer span:nth-child(6) { animation-delay: 1.3s; }
+        .web-developer span:nth-child(7) { animation-delay: 1.5s; }
+        .web-developer span:nth-child(8) { animation-delay: 1.7s; }
+        .web-developer span:nth-child(9) { animation-delay: 1.9s; }
+        .web-developer span:nth-child(10) { animation-delay: 2.1s; }
+        .web-developer span:nth-child(11) { animation-delay: 2.3s; }
+        .web-developer span:nth-child(12) { animation-delay: 2.5s; }
+        .web-developer span:nth-child(13) { animation-delay: 2.7s; }
+    }
+
+    
+
     .skills-container {
-        grid-template-columns: repeat(3, minmax(120px, 1fr));
+        display: grid;
+        grid-template-columns: repeat(3, minmax(120px, 1fr)); /* 3 columns */
         gap: 1rem;
         justify-content: center;
         align-items: center;
@@ -865,6 +908,13 @@ section{
         margin-top: -90px;
     }
 
+    .skill {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        
+    }
+
     .skill i {
         font-size: 1.6rem;
     }
@@ -873,15 +923,12 @@ section{
         font-size: 0.9rem;
         margin-top: 5px;
     }
+   
 
-    /* Projects Section */
-    .projects-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        padding: 2rem;
-    }
+    
+
 }
+
 
 @media (max-width: 600px) {
     .about-summary {
@@ -907,9 +954,12 @@ section{
         margin-top: 1rem;
         width: 100%;
         padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
         background: rgba(0, 0, 0, 0.9);
         border-radius: 3rem;
-        text-align: center;
         display: none;
     }
 
@@ -923,8 +973,12 @@ section{
     }
 
     header {
-        padding: 1rem;
+        padding: 1rem 1rem;
         gap: 3rem;
+    }
+
+    header .logo {
+        font-size: 1.4rem;
     }
 
     .about-container img {
@@ -940,11 +994,27 @@ section{
         font-size: 3rem;
     }
 
+    .text span {
+        font-size: 1.5rem;
+    }
+
+    footer ul {
+        gap: 1rem;
+    }
+
     .skills-container {
         grid-template-columns: repeat(2, minmax(120px, 1fr));
     }
 
-    .projects-container {
-        grid-template-columns: repeat(1, 1fr);
+    .skill {
+        width: 100%;
+    }
+
+    .skill i {
+        font-size: 1.5rem;
+    }
+
+    .skill p {
+        font-size: 0.7rem;
     }
 }
